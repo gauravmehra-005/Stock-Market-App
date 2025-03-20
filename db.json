@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "66b2",
+      "username": "user",
+      "password": "124",
+      "dob": "2025-03-04",
+      "deposit": "10000"
+    },
+    {
+      "id": "8075",
+      "username": "user1",
+      "password": "12345",
+      "dob": "2025-03-04",
+      "deposit": "10000"
+    }
+  ]
+}
