@@ -1,18 +1,11 @@
 {
-  "users": [
-    {
-      "id": "66b2",
-      "username": "user",
-      "password": "124",
-      "dob": "2025-03-04",
-      "deposit": "10000"
-    },
-    {
-      "id": "8075",
-      "username": "user1",
-      "password": "12345",
-      "dob": "2025-03-04",
-      "deposit": "10000"
-    }
-  ]
+  "watchlist": [
+    { "id": 1, "symbol": "AAPL", "company": "Apple Inc.", "price": 150.5 },
+    { "id": 2, "symbol": "GOOGL", "company": "Alphabet Inc.", "price": 2800.75 }
+  ],
+  "holdings": [
+    { "id": 1, "symbol": "TSLA", "company": "Tesla Inc.", "quantity": 5, "buyPrice": 650.0 },
+    { "id": 2, "symbol": "AMZN", "company": "Amazon.com Inc.", "quantity": 2, "buyPrice": 3200.5 }
+  ],
+  "balance": { "amount": 10000 }
 }
