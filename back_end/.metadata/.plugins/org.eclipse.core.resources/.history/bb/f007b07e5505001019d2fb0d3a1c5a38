@@ -1,0 +1,16 @@
+package com.example.demo.service;
+
+import java.util.Random;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.repo.StockRepo;
+
+@Service
+public class StockService {
+	
+	private final StockRepo stockRepo = null;
+	private final Random random = new Random();
+	
+	
+}
