@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../pagesCss/ForgotPassword.css"; // Import the new CSS file
 
 const ForgotPassword = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +11,8 @@ const ForgotPassword = () => {
   });
 
   const [message, setMessage] = useState("");
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -41,24 +43,32 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}>
-      <h2>Forgot Password</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" name="username" onChange={handleChange} required />
-        </div>
-        <div>
-          <label>Date of Birth:</label>
-          <input type="date" name="dob" onChange={handleChange} required />
-        </div>
-        <div>
-          <label>New Password:</label>
-          <input type="password" name="newPassword" onChange={handleChange} required />
-        </div>
-        <button type="submit">Reset Password</button>
-      </form>
+    <div className="forgot-container">
+      <div className="forgot-box">
+        <h2>Reset Your Password</h2>
+        {message && <p className="forgot-message">{message}</p>}
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label>Username:</label>
+            <input type="text" name="username" onChange={handleChange} required />
+          </div>
+          <div className="input-group">
+            <label>Date of Birth:</label>
+            <input type="date" name="dob" onChange={handleChange} required />
+          </div>
+          <div className="input-group">
+            <label>New Password:</label>
+            <input type="password" name="newPassword" onChange={handleChange} required />
+          </div>
+          <button type="submit" className="forgot-button">Reset Password</button>
+        </form>
+        <p className="back-to-login">
+          Remember your password?{" "}
+          <button onClick={() => navigate("/login")} className="login-button">
+            Login
+          </button>
+        </p>
+      </div>
     </div>
   );
 };

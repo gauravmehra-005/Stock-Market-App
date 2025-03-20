@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../pagesCss/ChangePassword.css"; // Import the new CSS file
 
 const ChangePassword = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +15,9 @@ const ChangePassword = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -41,24 +44,26 @@ const ChangePassword = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}>
-      <h2>Change Password</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" name="username" onChange={handleChange} required />
-        </div>
-        <div>
-          <label>Old Password:</label>
-          <input type="password" name="oldPassword" onChange={handleChange} required />
-        </div>
-        <div>
-          <label>New Password:</label>
-          <input type="password" name="newPassword" onChange={handleChange} required />
-        </div>
-        <button type="submit">Change Password</button>
-      </form>
+    <div className="change-password-container">
+      <div className="change-password-box">
+        <h2>Change Password</h2>
+        {message && <p className="change-password-message">{message}</p>}
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label>Username:</label>
+            <input type="text" name="username" onChange={handleChange} required />
+          </div>
+          <div className="input-group">
+            <label>Old Password:</label>
+            <input type="password" name="oldPassword" onChange={handleChange} required />
+          </div>
+          <div className="input-group">
+            <label>New Password:</label>
+            <input type="password" name="newPassword" onChange={handleChange} required />
+          </div>
+          <button type="submit" className="change-password-button">Change Password</button>
+        </form>
+      </div>
     </div>
   );
 };

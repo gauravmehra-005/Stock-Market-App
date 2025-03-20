@@ -4,8 +4,8 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import ChangePassword from "./pages/ChangePassword";
 import ForgotPassword from "./pages/ForgotPassword";
-import Dashboard from "./pages/Dashboard";
-       
+import Dashboard from "./pages/Dashboard";   
+import AdminDashboard from "./pages/Admindashboard";
 function App() {
   return (
     <Router>
@@ -15,7 +15,7 @@ function App() {
         <Route path="/change-password" element={<ChangePassword />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<Dashboard />} />
-
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );

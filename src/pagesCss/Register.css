@@ -1,0 +1,80 @@
+/* Register.css */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Professional Financial Theme */
+  }
+  
+  .register-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+  }
+  
+  .register-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .register-button {
+    width: 100%;
+    background: #1e3c72;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .register-button:hover {
+    background: #16315d;
+  }
+  
+  .login-link {
+    margin-top: 15px;
+  }
+  
+  .login-button {
+    background: none;
+    border: none;
+    color: #1e3c72;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-button:hover {
+    text-decoration: underline;
+  }
+  

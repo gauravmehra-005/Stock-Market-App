@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../pagesCss/Register.css"; 
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -38,29 +39,36 @@ const Register = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}>
-      <h2>Register</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" name="username" onChange={handleChange} required />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" name="password" onChange={handleChange} required />
-        </div>
-        <div>
-          <label>Date of Birth:</label>
-          <input type="date" name="dob" onChange={handleChange} required />
-        </div>
-        <div>
-          <label>Initial Deposit:</label>
-          <input type="number" name="deposit" onChange={handleChange} required />
-        </div>
-        <button type="submit">Register</button>
-      </form>
-      <p>Already have an account? <button onClick={() => navigate("/login")}>Login</button></p>
+    <div className="register-container">
+      <div className="register-box">
+        <h2>Welcome to WealthBuilder</h2>
+        {message && <p className="register-message">{message}</p>}
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label>Username:</label>
+            <input type="text" name="username" onChange={handleChange} required />
+          </div>
+          <div className="input-group">
+            <label>Password:</label>
+            <input type="password" name="password" onChange={handleChange} required />
+          </div>
+          <div className="input-group">
+            <label>Date of Birth:</label>
+            <input type="date" name="dob" onChange={handleChange} required />
+          </div>
+          <div className="input-group">
+            <label>Initial Deposit:</label>
+            <input type="number" name="deposit" onChange={handleChange} required />
+          </div>
+          <button type="submit" className="register-button">Register</button>
+        </form>
+        <p className="login-link">
+          Already have an account?{" "}
+          <button onClick={() => navigate("/login")} className="login-button">
+            Login
+          </button>
+        </p>
+      </div>
     </div>
   );
 };
